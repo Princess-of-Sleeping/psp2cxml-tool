@@ -1,0 +1,3902 @@
+= RCO Keys =
+
+== alias ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| org_id
+| idhashref
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#aliastable]]
+
+== aliastable ==
+
+Allowed Attr
+
+none
+
+Allowed Parent
+
+[[#resource]]
+
+== app_icon_simple ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| appearance
+| int
+|-
+| enable_tap
+| int
+|-
+| id
+| hash
+|-
+| texture
+| idhashref
+|}
+
+Allowed Parent
+
+[[#button]], [[#list_item]], [[#template]], [[#group]], [[#text]], [[#plane]], [[#box]]
+
+== banner_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#list_item]]
+
+== box ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|-
+| exclusive_list
+| string
+|-
+| hit_ignore
+| int
+|-
+| texture
+| idhashref
+|}
+
+Allowed Parent
+
+[[#rich_text]], [[#template]], [[#scroll_view]], [[#button]], [[#list_item]], [[#box]], [[#plane]]
+
+[[#radio_box]], [[#speech_balloon]], [[#group]], [[#dialog]], [[#radio_button]], [[#page]]
+
+[[#composite_drawer]], [[#plane_button]], [[#image_button]]
+
+== browser_rich_text ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|-
+| w_sbar_v
+| hash
+|}
+
+Allowed Parent
+
+[[#group]], [[#box]]
+
+== busyindicator ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|-
+| texture
+| idhashref
+|}
+
+Allowed Parent
+
+[[#list_item]], [[#text]], [[#group]], [[#page]], [[#plane]], [[#list_view]], [[#template]], [[#box]], [[#scroll_view]]
+
+[[#rich_text]], [[#button]]
+
+== button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| enable_long_press_text_auto_scroll
+| int
+|-
+| id
+| hash
+|-
+| texture
+| idhashref
+|-
+| label
+| idhashref
+|-
+| sound
+| idhashref
+|-
+| enable
+| int
+|}
+
+Allowed Parent
+
+[[#plane]], [[#rich_text]], [[#box]], [[#list_item]], [[#group]], [[#text_box]], [[#button]], [[#template]]
+
+[[#text]], [[#page]], [[#image_button]], [[#pagetable]], [[#composite_drawer]], [[#scroll_view]]
+
+[[#plane_shadow]], [[#speech_balloon]]
+
+== button_base ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#template]]
+
+== check_box ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| hash
+|-
+| style
+| idhashref
+|-
+| sound
+| idhashref
+|}
+
+Allowed Parent
+
+[[#rich_text]], [[#box]], [[#button]], [[#plane]], [[#group]], [[#text]], [[#list_item]], [[#template]], [[#text_box]]
+
+[[#image_button]]
+
+== color_change_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| enable_long_press_text_auto_scroll
+| int
+|-
+| id
+| hash
+|-
+| texture
+| idhashref
+|}
+
+Allowed Parent
+
+[[#plane]], [[#group]]
+
+== color_shift_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| press_color
+| floatarray
+|-
+| style
+| idhashref
+|-
+| enable_long_press_text_auto_scroll
+| int
+|-
+| id
+| hash
+|-
+| default_color
+| floatarray
+|}
+
+Allowed Parent
+
+[[#list_item]], [[#group]]
+
+== composite_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|-
+| sound
+| idhashref
+|-
+| str1
+| idhashref
+|-
+| tex0
+| idhashref
+|}
+
+Allowed Parent
+
+[[#group]], [[#box]], [[#template]]
+
+== composite_drawer ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| hash
+|-
+| style
+| idhashref
+|}
+
+Allowed Parent
+
+[[#box]], [[#scroll_view]], [[#plane]], [[#group]], [[#template]], [[#button_base]]
+
+== corner_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#page]], [[#template]], [[#plane]], [[#group]], [[#pagetable]]
+
+== dialog ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|-
+| exclusive_list
+| string
+|}
+
+Allowed Parent
+
+[[#template]]
+
+== directbar ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| launchbtn_y
+| float
+|-
+| balloon_type
+| int
+|-
+| texture
+| idhashref
+|-
+| label
+| idhashref
+|-
+| hitmargin
+| float
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#template]]
+
+== drop_shadow_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| shadow_color
+| floatarray
+|-
+| shadow_press_blur_factor
+| float
+|-
+| shadow_scale
+| floatarray
+|-
+| shadow_texture_no
+| int
+|-
+| shadow_press_pos
+| floatarray
+|-
+| shadow_pos
+| floatarray
+|-
+| texture
+| idhashref
+|-
+| shadow_ofs
+| floatarray
+|-
+| shadow_press_color
+| floatarray
+|-
+| style
+| idhashref
+|-
+| enable_long_press_text_auto_scroll
+| int
+|-
+| shadow_blur_factor
+| float
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#group]], [[#plane]], [[#color_shift_button]], [[#text]], [[#template]]
+
+== file ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| origsize
+| int
+|-
+| src
+| filename
+|-
+| type
+| string
+|-
+| id
+| idhash
+|-
+| compress
+| string
+|}
+
+Allowed Parent
+
+[[#filetable]]
+
+== file_list ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#plane]], [[#template]], [[#box]], [[#composite_drawer]]
+
+== filetable ==
+
+Allowed Attr
+
+none
+
+Allowed Parent
+
+[[#resource]]
+
+== five_star_plane ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| off_texture
+| idhashref
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|-
+| on_texture
+| idhashref
+|}
+
+Allowed Parent
+
+[[#template]], [[#group]], [[#box]]
+
+== focus_hint ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| focus_offset
+| floatarray
+|-
+| focus_size
+| floatarray
+|-
+| focus_shape
+| int
+|-
+| focus_rot
+| floatarray
+|-
+| focus_texture
+| idhashref
+|-
+| right_id
+| hash
+|-
+| left_id
+| hash
+|-
+| down_id
+| hash
+|-
+| up_id
+| hash
+|-
+| direct_key
+| int
+|-
+| enable
+| int
+|}
+
+Allowed Parent
+
+[[#color_change_button]], [[#drop_shadow_button]], [[#button]], [[#color_shift_button]]
+
+[[#image_button]], [[#text_box]], [[#radio_button]], [[#corner_button]], [[#plane_button]]
+
+[[#check_box]], [[#update_button]], [[#list_view]], [[#plane]], [[#list_item]], [[#num_spin]]
+
+[[#group]], [[#app_icon_simple]], [[#file_list]], [[#box]], [[#composite_button]], [[#button_base]]
+
+== group ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#page]], [[#plane]], [[#group]], [[#template]], [[#list_item]], [[#box]], [[#scroll_view]], [[#rich_text]]
+
+[[#plane_shadow]], [[#plane_button]]
+
+== id ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#idtable]]
+
+== idtable ==
+
+Allowed Attr
+
+none
+
+Allowed Parent
+
+[[#resource]]
+
+== image_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|-
+| sound
+| idhashref
+|-
+| label
+| idhashref
+|-
+| enable
+| int
+|-
+| enable_long_press_text_auto_scroll
+| int
+|-
+| texture
+| idhashref
+|}
+
+Allowed Parent
+
+[[#plane]], [[#box]], [[#list_item]], [[#group]], [[#template]]
+
+== image_slidebar ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| base_mode
+| int
+|-
+| texture
+| idhashref
+|-
+| texture_bar
+| idhashref
+|-
+| tex_mode
+| int
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#box]]
+
+== layout_box ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| bottom_margin
+| float
+|-
+| boundary_mode_x
+| int
+|-
+| space
+| float
+|-
+| align
+| intarray
+|-
+| top_margin
+| float
+|-
+| id
+| hash
+|-
+| adjust
+| intarray
+|-
+| layout_type
+| int
+|-
+| anchor
+| intarray
+|-
+| children_align_y
+| int
+|-
+| pos
+| floatarray
+|-
+| children_align_x
+| int
+|-
+| space_adjust
+| int
+|-
+| children_adjust_y
+| int
+|-
+| children_adjust_x
+| int
+|-
+| size
+| floatarray
+|-
+| min_size
+| floatarray
+|-
+| right_margin
+| float
+|-
+| left_margin
+| float
+|-
+| max_size
+| floatarray
+|-
+| origin
+| intarray
+|-
+| boundary_mode_y
+| int
+|-
+| children_height
+| float
+|-
+| alpha
+| float
+|}
+
+Allowed Parent
+
+[[#box]]
+
+== layout_dialog ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| children_adjust_y
+| int
+|-
+| children_adjust_x
+| int
+|-
+| layout_type
+| int
+|-
+| adjust
+| intarray
+|-
+| size
+| floatarray
+|-
+| pos
+| floatarray
+|-
+| id
+| hash
+|-
+| min_size
+| floatarray
+|-
+| align
+| intarray
+|}
+
+Allowed Parent
+
+[[#dialog]]
+
+== layout_hint ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| origin
+| intarray
+|-
+| align
+| intarray
+|-
+| pos
+| floatarray
+|-
+| id
+| hash
+|-
+| adjust
+| intarray
+|-
+| alpha
+| float
+|-
+| rot
+| floatarray
+|-
+| anchor
+| intarray
+|-
+| size
+| floatarray
+|}
+
+Allowed Parent
+
+[[#group]], [[#plane]], [[#color_change_button]], [[#list_view]], [[#text]], [[#drop_shadow_button]]
+
+[[#button]], [[#rich_text]], [[#check_box]], [[#scrollbar_touch]], [[#plane_button]]
+
+[[#list_item]], [[#scroll_view]], [[#box]], [[#busyindicator]], [[#color_shift_button]]
+
+[[#progressbar]], [[#image_button]], [[#text_box]], [[#radio_button]], [[#corner_button]]
+
+[[#speech_balloon]], [[#radio_box]], [[#five_star_plane]], [[#browser_rich_text]]
+
+[[#thumbnail_button]], [[#scrollbar]], [[#image_slidebar]], [[#file_list]], [[#sliding_drawer]]
+
+[[#progressbar_touch]], [[#update_button]], [[#directbar]], [[#template]], [[#slidebar]]
+
+[[#page]], [[#composite_drawer]], [[#plane_shadow]], [[#num_spin]], [[#list_edge]], [[#webview]]
+
+[[#app_icon_simple]], [[#style_plane]], [[#composite_button]], [[#button_base]]
+
+== list_edge ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#template]]
+
+== list_item ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| hash
+|-
+| style
+| idhashref
+|-
+| text_auto_scroll_target
+| hash
+|}
+
+Allowed Parent
+
+[[#template]], [[#list_item]]
+
+== list_view ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|-
+| sbar_fadeout_time
+| float
+|-
+| w_sbar_v
+| hash
+|-
+| sound
+| idhashref
+|-
+| w_sbar_h
+| hash
+|}
+
+Allowed Parent
+
+[[#plane]], [[#group]], [[#box]], [[#template]], [[#page]], [[#plane_shadow]]
+
+== locale ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| origsize
+| int
+|-
+| src
+| filename
+|-
+| compress
+| string
+|-
+| id
+| id
+|}
+
+Allowed Parent
+
+[[#stringtable]]
+
+== num_spin ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| hash
+|-
+| loop
+| int
+|}
+
+Allowed Parent
+
+[[#box]]
+
+== override_alias ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| model_type
+| int
+|-
+| org_id
+| idhashref
+|}
+
+Allowed Parent
+
+[[#alias]]
+
+== override_template_ref ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| resolution
+| hash
+|-
+| template
+| idhashref
+|}
+
+Allowed Parent
+
+[[#template_ref]]
+
+== override_texture ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| model_type
+| int
+|-
+| src
+| filename
+|-
+| origsize
+| int
+|-
+| compress
+| string
+|-
+| type
+| string
+|-
+| margin_v
+| intarray
+|-
+| margin_h
+| intarray
+|-
+| ignore_make_surface_first
+| string
+|}
+
+Allowed Parent
+
+[[#texture]]
+
+== page ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|-
+| origin
+| intarray
+|-
+| style
+| idhashref
+|-
+| template
+| idhashref
+|-
+| layouter
+| string
+|}
+
+Allowed Parent
+
+[[#pagetable]]
+
+== pagetable ==
+
+Allowed Attr
+
+none
+
+Allowed Parent
+
+[[#resource]]
+
+== plane ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|-
+| texture
+| idhashref
+|-
+| hit_ignore
+| int
+|}
+
+Allowed Parent
+
+[[#group]], [[#plane]], [[#page]], [[#rich_text]], [[#list_item]], [[#drop_shadow_button]]
+
+[[#template]], [[#box]], [[#button]], [[#color_shift_button]], [[#text]], [[#radio_box]], [[#dialog]]
+
+[[#sliding_drawer]], [[#image_button]], [[#progressbar_touch]], [[#scroll_view]]
+
+[[#plane_button]], [[#text_box]], [[#slidebar]], [[#pagetable]], [[#plane_shadow]], [[#list_edge]]
+
+[[#app_icon_simple]], [[#check_box]], [[#composite_button]]
+
+== plane_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|-
+| sound
+| idhashref
+|-
+| texture
+| idhashref
+|-
+| enable
+| int
+|}
+
+Allowed Parent
+
+[[#plane]], [[#page]], [[#group]], [[#text_box]], [[#template]], [[#list_item]], [[#app_icon_simple]]
+
+[[#composite_button]], [[#composite_drawer]], [[#text]]
+
+== plane_shadow ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#page]], [[#box]]
+
+== planeobj ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| hash
+|-
+| tex_region
+| floatarray
+|-
+| scale_mode_y
+| int
+|-
+| scale_mode_x
+| int
+|-
+| blend
+| int
+|-
+| scale_value
+| floatarray
+|-
+| texture0
+| idhashref
+|-
+| color
+| floatarray
+|-
+| size
+| floatarray
+|-
+| reduce_transparency
+| int
+|-
+| align_y
+| int
+|-
+| pos
+| floatarray
+|-
+| texture1
+| idhashref
+|-
+| align_x
+| int
+|}
+
+Allowed Parent
+
+[[#style_plane]], [[#style_drop_shadow_plane]], [[#style_button]], [[#style_drop_shadow_button]]
+
+[[#style_list_item]], [[#style_list_view]], [[#style_color_change_button]]
+
+[[#style_scrollbar]], [[#style_rich_text]], [[#style_scrollbar_touch]]
+
+[[#style_image_button]], [[#style_text]], [[#style_box]], [[#style_speech_balloon]]
+
+[[#style_text_box]], [[#style_radio_button]], [[#style_image_slidebar]]
+
+[[#style_scroll_view]], [[#style_banner_button]], [[#style_browser_rich_text]]
+
+[[#style_five_star_plane]], [[#style_thumbnail_button]], [[#style_plane_button]]
+
+[[#style_file_list]], [[#style_progressbar]], [[#style_progressbar_touch]]
+
+[[#style_update_button]], [[#style_corner_button]], [[#style_directbar]]
+
+[[#style_slidebar]], [[#style_check_box]], [[#style_plane_shadow]], [[#style_scrollbar2d]]
+
+[[#style_composite_button]], [[#style_composite_drawer]], [[#style_webview]]
+
+[[#style_mapview]]
+
+== progressbar ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| label_pos_mode
+| int
+|-
+| id
+| hash
+|-
+| w_label
+| hash
+|-
+| signal_anim
+| int
+|-
+| label_mode
+| int
+|-
+| label_margin
+| float
+|-
+| bar_mode
+| int
+|}
+
+Allowed Parent
+
+[[#box]], [[#plane]], [[#button]], [[#template]], [[#group]], [[#page]], [[#plane_button]]
+
+== progressbar_touch ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| label_pos_mode
+| int
+|-
+| w_label
+| hash
+|-
+| label_mode
+| int
+|-
+| label_margin
+| float
+|-
+| id
+| hash
+|-
+| bar_mode
+| int
+|}
+
+Allowed Parent
+
+[[#plane]]
+
+== radio_box ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#plane]], [[#text]], [[#box]], [[#page]], [[#template]]
+
+== radio_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| hash
+|-
+| style
+| idhashref
+|-
+| tuck
+| int
+|}
+
+Allowed Parent
+
+[[#box]], [[#template]], [[#radio_box]]
+
+== resolution ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| size
+| floatarray
+|-
+| id
+| hash
+|-
+| pos
+| floatarray
+|-
+| rot
+| floatarray
+|}
+
+Allowed Parent
+
+[[#layout_box]], [[#layout_hint]]
+
+== resource ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| version
+| float
+|-
+| type
+| string
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+none.
+
+== rich_text ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| w_sbar_v
+| hash
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#plane]], [[#template]], [[#page]], [[#group]], [[#box]]
+
+== scroll_view ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| w_sbar_v
+| hash
+|-
+| id
+| hash
+|-
+| snap_anim_time
+| float
+|-
+| sbar_fadeout_time
+| float
+|-
+| w_sbar_h
+| hash
+|-
+| auto_snap
+| int
+|-
+| edit_auto_transition_mode
+| int
+|-
+| snap_power
+| float
+|}
+
+Allowed Parent
+
+[[#box]], [[#page]], [[#template]], [[#group]], [[#plane]], [[#list_item]], [[#plane_shadow]]
+
+== scrollbar ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|-
+| scroll_type
+| int
+|}
+
+Allowed Parent
+
+[[#list_view]], [[#browser_rich_text]], [[#scroll_view]], [[#rich_text]], [[#template]]
+
+== scrollbar_touch ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|-
+| sound
+| idhashref
+|-
+| scroll_type
+| int
+|}
+
+Allowed Parent
+
+[[#box]], [[#text_box]], [[#list_view]], [[#rich_text]], [[#scroll_view]]
+
+== slidebar ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| min_label_margin
+| float
+|-
+| min_label_mode
+| int
+|-
+| max_label_mode
+| int
+|-
+| w_max_label
+| hash
+|-
+| max_label_pos_mode
+| int
+|-
+| w_min_label
+| hash
+|-
+| touch_mode
+| int
+|-
+| slider_size
+| floatarray
+|-
+| max_label_margin
+| float
+|-
+| min_label_pos_mode
+| int
+|-
+| id
+| hash
+|-
+| slider_label_margin
+| float
+|-
+| slider_label_mode
+| int
+|-
+| slider_label_pos_mode
+| int
+|-
+| w_slider_label
+| hash
+|}
+
+Allowed Parent
+
+[[#plane]], [[#group]]
+
+== sliding_drawer ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#page]]
+
+== sound_banner_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|-
+| decide
+| idhashref
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|-
+| decide
+| idhashref
+|-
+| press
+| idhashref
+|-
+| move_out
+| idhashref
+|-
+| long_press
+| idhashref
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_check_box ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| uncheck
+| idhashref
+|-
+| check
+| idhashref
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_composite_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|-
+| decide
+| idhashref
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_corner_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|-
+| decide
+| idhashref
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_file_list ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_image_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|-
+| decide
+| idhashref
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_list_item ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_list_view ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_mapview ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_plane_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|-
+| decide
+| idhashref
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_radio_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|-
+| decide
+| idhashref
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_rich_text ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_scroll_view ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_scrollbar_touch ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| page_scroll
+| idhashref
+|-
+| drag_begin
+| idhashref
+|-
+| drag_end
+| idhashref
+|-
+| id
+| idhash
+|-
+| page_scroll_repeat
+| idhashref
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_text ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|-
+| link_tapped
+| idhashref
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_text_box ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| tapped
+| idhashref
+|-
+| id
+| idhash
+|-
+| link_tapped
+| idhashref
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_thumbnail_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|-
+| decide
+| idhashref
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_update_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|-
+| decide
+| idhashref
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sound_webview ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#soundindextable]]
+
+== sounddata ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| src
+| filename
+|-
+| rate
+| int
+|-
+| type
+| string
+|-
+| id
+| idhash
+|-
+| right
+| filename
+|-
+| left
+| filename
+|}
+
+Allowed Parent
+
+[[#sounddatatable]]
+
+== sounddatatable ==
+
+Allowed Attr
+
+none
+
+Allowed Parent
+
+[[#resource]]
+
+== soundindextable ==
+
+Allowed Attr
+
+none
+
+Allowed Parent
+
+[[#resource]]
+
+== speech_balloon ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|-
+| texture
+| idhashref
+|}
+
+Allowed Parent
+
+[[#plane]], [[#scroll_view]], [[#box]], [[#template]]
+
+== stringtable ==
+
+Allowed Attr
+
+none
+
+Allowed Parent
+
+[[#resource]]
+
+== style_app_icon_simple ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_banner_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| sound
+| idhashref
+|-
+| id
+| idhash
+|-
+| bg_obj
+| hash
+|-
+| glow_obj
+| hash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_box ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| id
+| idhash
+|-
+| planeobj
+| hash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_browser_rich_text ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| bg_obj
+| hash
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_busyindicator ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| ball_size
+| float
+|-
+| id
+| idhash
+|-
+| ball_color
+| floatarray
+|-
+| color
+| floatarray
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| bg_obj
+| hash
+|-
+| id
+| idhash
+|-
+| glow_obj
+| hash
+|-
+| right_margin
+| float
+|-
+| left_margin
+| float
+|-
+| label_obj
+| hash
+|-
+| adjust_min_size
+| floatarray
+|-
+| sound
+| idhashref
+|-
+| bottom_margin
+| float
+|-
+| top_margin
+| float
+|-
+| highlight_obj
+| hash
+|-
+| focus_in_group
+| int
+|-
+| key_focus
+| int
+|-
+| direct_key
+| int
+|-
+| adjust_max_size
+| floatarray
+|-
+| style_type
+| int
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_button_base ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_check_box ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| sound
+| idhashref
+|-
+| glow_obj
+| hash
+|-
+| color
+| floatarray
+|-
+| left_margin
+| float
+|-
+| frame_num
+| int
+|-
+| image_obj
+| hash
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_color_change_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| bg_obj
+| hash
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_color_shift_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_composite_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| sound
+| idhashref
+|-
+| glow_obj_id
+| int
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_composite_drawer ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_corner_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| sound
+| idhashref
+|-
+| key_focus
+| int
+|-
+| corner_obj
+| hash
+|-
+| glow_obj
+| hash
+|-
+| highlight_obj
+| hash
+|-
+| focus_in_group
+| int
+|-
+| direct_key
+| int
+|-
+| bg_obj
+| hash
+|-
+| layout_type
+| int
+|-
+| id
+| idhash
+|-
+| color
+| floatarray
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_dialog ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_directbar ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| balloon_obj
+| hash
+|-
+| color
+| floatarray
+|-
+| launchbtn_obj
+| hash
+|-
+| label_obj
+| hash
+|-
+| bg_obj
+| hash
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_drop_shadow_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| bg_obj
+| hash
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_drop_shadow_plane ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| id
+| idhash
+|-
+| planeobj
+| hash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_file_list ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| bg_obj
+| hash
+|-
+| id
+| idhash
+|-
+| sbar_v_margin
+| floatarray
+|-
+| sound
+| idhashref
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_five_star_plane ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| id
+| idhash
+|-
+| planeobj
+| hash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_group ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_image_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| image_obj
+| hash
+|-
+| sound
+| idhashref
+|-
+| glow_obj
+| hash
+|-
+| id
+| idhash
+|-
+| bottom_margin
+| float
+|-
+| layout_type_x
+| int
+|-
+| color
+| floatarray
+|-
+| right_margin
+| float
+|-
+| top_margin
+| float
+|-
+| left_margin
+| float
+|-
+| focus_in_group
+| int
+|-
+| label_obj
+| hash
+|-
+| bg_obj
+| hash
+|-
+| image_margin
+| float
+|-
+| highlight_obj
+| hash
+|-
+| image_back_obj
+| hash
+|-
+| layout_type_y
+| int
+|-
+| adjust_min_size
+| floatarray
+|-
+| style_type
+| int
+|-
+| key_focus
+| int
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_image_slidebar ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| base_obj
+| hash
+|-
+| id
+| idhash
+|-
+| bar_obj
+| hash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_list_edge ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| bottom_margin
+| float
+|-
+| top_margin
+| float
+|-
+| id
+| idhash
+|-
+| bottom_gradient
+| float
+|-
+| bottom_intercept
+| float
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_list_item ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| bg_obj
+| hash
+|-
+| id
+| idhash
+|-
+| sound
+| idhashref
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_list_view ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| bg_obj
+| hash
+|-
+| id
+| idhash
+|-
+| sound
+| idhashref
+|-
+| cell_size_initial_default
+| floatarray
+|-
+| sbar_v_margin
+| floatarray
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_mapview ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| sound
+| idhashref
+|-
+| bg_obj
+| hash
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_page ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_plane ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| id
+| idhash
+|-
+| planeobj
+| hash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_plane_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| key_focus
+| int
+|-
+| glow_obj
+| hash
+|-
+| color
+| floatarray
+|-
+| focus_in_group
+| int
+|-
+| direct_key
+| int
+|-
+| image_obj
+| hash
+|-
+| id
+| idhash
+|-
+| sound
+| idhashref
+|-
+| bottom_margin
+| float
+|-
+| right_margin
+| float
+|-
+| top_margin
+| float
+|-
+| left_margin
+| float
+|-
+| adjust_min_size
+| floatarray
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_plane_shadow ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| shadow_obj
+| hash
+|-
+| id
+| idhash
+|-
+| planeobj
+| hash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_progressbar ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| base_obj
+| hash
+|-
+| bar_fore_obj
+| hash
+|-
+| id
+| idhash
+|-
+| shadow_margin
+| floatarray
+|-
+| shadow_offset
+| floatarray
+|-
+| glow_obj
+| hash
+|-
+| bar_shadow_obj
+| hash
+|-
+| bar_back_obj
+| hash
+|-
+| signal_obj
+| hash
+|-
+| base_shadow_obj
+| hash
+|-
+| anim_func
+| int
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_progressbar_touch ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| base_obj
+| hash
+|-
+| slider_obj
+| hash
+|-
+| glow_obj
+| hash
+|-
+| bar_shadow_obj
+| hash
+|-
+| shadow_margin
+| floatarray
+|-
+| bar_fore_obj
+| hash
+|-
+| shadow_offset
+| floatarray
+|-
+| bar_back_obj
+| hash
+|-
+| signal_obj
+| hash
+|-
+| base_shadow_obj
+| hash
+|-
+| id
+| idhash
+|-
+| slider_glow_obj
+| hash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_radio_box ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_radio_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| sound
+| idhashref
+|-
+| bottom_margin
+| float
+|-
+| right_margin
+| float
+|-
+| color
+| floatarray
+|-
+| top_margin
+| float
+|-
+| left_margin
+| float
+|-
+| focus_in_group
+| int
+|-
+| label_obj
+| hash
+|-
+| frame_num
+| int
+|-
+| image_obj
+| hash
+|-
+| id
+| idhash
+|-
+| glow_obj
+| hash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_rich_text ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| bg_obj
+| hash
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_scroll_view ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| id
+| idhash
+|-
+| bg_obj
+| hash
+|-
+| sound
+| idhashref
+|-
+| sbar_v_margin
+| floatarray
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_scrollbar ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| min_size
+| float
+|-
+| base_obj
+| hash
+|-
+| slider_obj
+| hash
+|-
+| id
+| idhash
+|-
+| jet_tail_obj
+| hash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_scrollbar2d ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| base_obj
+| hash
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_scrollbar_touch ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| min_size
+| float
+|-
+| base_obj
+| hash
+|-
+| slider_obj
+| hash
+|-
+| slider_glow_obj
+| hash
+|-
+| id
+| idhash
+|-
+| sound
+| idhashref
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_slidebar ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| base_obj
+| hash
+|-
+| slider_obj
+| hash
+|-
+| id
+| idhash
+|-
+| bar_obj
+| hash
+|-
+| slider_glow_obj
+| hash
+|-
+| color
+| floatarray
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_sliding_drawer ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_speech_balloon ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| shadow_obj
+| hash
+|-
+| id
+| idhash
+|-
+| planeobj
+| hash
+|-
+| color
+| floatarray
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_text ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| textobj
+| hash
+|-
+| id
+| idhash
+|-
+| bottom_margin
+| float
+|-
+| right_margin
+| float
+|-
+| top_margin
+| float
+|-
+| left_margin
+| float
+|-
+| planeobj
+| hash
+|-
+| sound
+| idhashref
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_text_box ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| sound
+| idhashref
+|-
+| textobj
+| hash
+|-
+| right_margin
+| float
+|-
+| planeobj
+| hash
+|-
+| left_margin
+| float
+|-
+| id
+| idhash
+|-
+| bottom_margin
+| float
+|-
+| top_margin
+| float
+|-
+| glowobj
+| hash
+|-
+| color
+| floatarray
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_thumbnail_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| sound
+| idhashref
+|-
+| id
+| idhash
+|-
+| bg_obj
+| hash
+|-
+| glow_obj
+| hash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_update_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| image_obj
+| hash
+|-
+| arrow_obj
+| hash
+|-
+| glow_obj
+| hash
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_webview ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| sound
+| idhashref
+|-
+| bg_obj
+| hash
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== style_xm_list ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| color
+| floatarray
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#styletable]]
+
+== styletable ==
+
+Allowed Attr
+
+none
+
+Allowed Parent
+
+[[#resource]]
+
+== template ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| idhash
+|-
+| fast_open
+| int
+|}
+
+Allowed Parent
+
+[[#templatetable]]
+
+== template_ref ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| hash
+|-
+| template
+| idhashref
+|}
+
+Allowed Parent
+
+[[#box]], [[#plane]], [[#group]], [[#template]], [[#page]], [[#plane_button]], [[#list_item]], [[#button]]
+
+== templatetable ==
+
+Allowed Attr
+
+none
+
+Allowed Parent
+
+[[#resource]]
+
+== text ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| auto_scroll
+| int
+|-
+| long_press_text_auto_scroll_mode
+| int
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|-
+| label
+| idhashref
+|-
+| selection_mode
+| int
+|-
+| texture
+| idhashref
+|-
+| scroll_view
+| hash
+|-
+| auto_link_detect
+| int
+|-
+| url_scheme
+| int
+|-
+| label_alias
+| idhashref
+|-
+| disable_auto_scroll
+| int
+|-
+| auto_scroll_target_friend
+| hash
+|}
+
+Allowed Parent
+
+[[#plane]], [[#group]], [[#rich_text]], [[#drop_shadow_button]], [[#box]], [[#button]], [[#list_item]]
+
+[[#color_shift_button]], [[#page]], [[#template]], [[#progressbar]], [[#text]], [[#progressbar_touch]]
+
+[[#plane_button]], [[#text_box]], [[#list_view]], [[#image_button]], [[#scroll_view]]
+
+[[#radio_button]], [[#plane_shadow]], [[#slidebar]], [[#pagetable]], [[#check_box]]
+
+== text_box ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|-
+| label
+| idhashref
+|-
+| selection_mode
+| int
+|-
+| edit_mode
+| int
+|-
+| paste_mode
+| int
+|-
+| placeholder
+| idhashref
+|-
+| scroll_view
+| hash
+|-
+| edit_auto_transition_mode
+| int
+|-
+| ime_type
+| int
+|-
+| max_length
+| int
+|-
+| ime_option
+| int
+|-
+| sound
+| idhashref
+|-
+| auto_scroll
+| int
+|-
+| texture
+| idhashref
+|-
+| password_mode
+| int
+|-
+| v_scrollbar
+| hash
+|-
+| ime_supported_languages
+| int
+|-
+| ime_languages_forced
+| int
+|}
+
+Allowed Parent
+
+[[#plane]], [[#text]], [[#box]], [[#group]], [[#scroll_view]], [[#page]], [[#template]], [[#plane_shadow]]
+
+[[#list_item]], [[#plane_button]]
+
+== textobj ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| visible_size
+| floatarray
+|-
+| line_space
+| float
+|-
+| font_size
+| float
+|-
+| bold
+| int
+|-
+| family
+| int
+|-
+| align_y
+| int
+|-
+| align_x
+| int
+|-
+| oblique
+| int
+|-
+| back_color
+| floatarray
+|-
+| text_align
+| int
+|-
+| word_wrap
+| int
+|-
+| kinsoku
+| int
+|-
+| adjust_x
+| int
+|-
+| adjust_y
+| int
+|-
+| visible_pos
+| floatarray
+|-
+| ellipsis
+| int
+|-
+| underline
+| int
+|-
+| id
+| hash
+|-
+| color
+| floatarray
+|-
+| size
+| floatarray
+|-
+| shadow_color
+| floatarray
+|-
+| underline_color
+| floatarray
+|-
+| emboss
+| int
+|-
+| strike_color
+| floatarray
+|-
+| strike
+| int
+|-
+| line_pitch
+| float
+|-
+| shadow
+| int
+|-
+| mask
+| int
+|-
+| font_color
+| floatarray
+|-
+| condense_x
+| int
+|-
+| enlarge_font_size
+| int
+|-
+| max_line_count
+| int
+|-
+| enlarge_line_pitch
+| int
+|-
+| pos
+| floatarray
+|-
+| force_bold
+| int
+|-
+| deepen_color
+| int
+|}
+
+Allowed Parent
+
+[[#style_text]], [[#style_button]], [[#style_text_box]], [[#style_radio_button]]
+
+[[#style_image_button]], [[#style_directbar]], [[#style_composite_button]]
+
+[[#style_composite_drawer]]
+
+== texture ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| src
+| filename
+|-
+| origsize
+| int
+|-
+| div_ratio_h
+| floatarray
+|-
+| compress
+| string
+|-
+| margin_v
+| intarray
+|-
+| div_mode
+| string
+|-
+| margin_h
+| intarray
+|-
+| div_ratio_v
+| floatarray
+|-
+| type
+| string
+|-
+| id
+| idhash
+|-
+| div_ratio_stretch
+| floatarray
+|-
+| ignore_make_surface_first
+| string
+|}
+
+Allowed Parent
+
+[[#texturetable]]
+
+== texturetable ==
+
+Allowed Attr
+
+none
+
+Allowed Parent
+
+[[#resource]]
+
+== thumbnail_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#template]]
+
+== update_button ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| sound
+| idhashref
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#group]], [[#plane]]
+
+== webview ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#plane]]
+
+== xm_list ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| style
+| idhashref
+|-
+| id
+| hash
+|}
+
+Allowed Parent
+
+[[#template]]
