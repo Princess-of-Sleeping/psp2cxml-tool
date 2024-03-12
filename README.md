@@ -19,3 +19,5 @@ See below for available keys.
 [CXML for RCO](./rco.wiki)
 
 [CXML for RCS](./rcs.wiki)
+
+Note : The key list was dumped from the SCE rcos, so there may be keys that are not used in the system's rco without list.
