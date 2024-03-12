@@ -1,0 +1,42 @@
+Attr Types
+
+{| class="wikitable"
+|-
+! Type !! Description
+|-
+| int (1)
+| Just integer data
+|-
+| float (2)
+| Just float data
+|-
+| string (3)
+| Just string data with terminating character. (UTF-8)
+|-
+| wstring (4)
+| Just wide string data with terminating character. (UTF-16)
+|-
+| hash (5)
+| Just hash data. (only upper 4-bytes in psp2)
+|-
+| intarray (6)
+| Just offset and size to integer array data.
+|-
+| floatarray (7)
+| Just offset and size to float array data.
+|-
+| filename (8)
+| Just offset and size to fileimage data.
+|-
+| id (9)
+| Just id as string. This is never duplicated in one cxml.
+|-
+| idref (10)
+| Just refer to id.
+|-
+| idhash (11)
+| Just idhash. This is never duplicated in one cxml.
+|-
+| idhashref (12)
+| Just refer to idhash.
+|}
