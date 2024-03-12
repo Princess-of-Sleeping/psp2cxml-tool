@@ -1,0 +1,30 @@
+= RCS Keys =
+
+== stringset ==
+
+Allowed Attr
+
+none.
+
+Allowed Parent
+
+none.
+
+== string ==
+
+Allowed Attr
+
+{| class="wikitable"
+|-
+! Name !! Type
+|-
+| src
+| wstring
+|-
+| id
+| idhash
+|}
+
+Allowed Parent
+
+[[#stringset]].
