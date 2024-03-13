@@ -1277,31 +1277,39 @@ Allowed Attr
 
 {| class="wikitable"
 |-
-! Name !! Type
+! Name !! Type !! Description
 |-
 | style
 | idhashref
+| -
 |-
 | label_pos_mode
 | int
+| -
 |-
 | id
 | hash
+| -
 |-
 | w_label
 | hash
+| id of tag inner text to display percentage.
 |-
 | signal_anim
 | int
+| -
 |-
 | label_mode
 | int
+| -
 |-
 | label_margin
 | float
+| -
 |-
 | bar_mode
 | int
+| -
 |}
 
 Allowed Parent
