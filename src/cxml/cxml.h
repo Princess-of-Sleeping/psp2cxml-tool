@@ -297,6 +297,7 @@ namespace cxml {
 			stack _stack;
 			uint32_t _offset;
 			wchar_t utf16;
+			const char *orig_data = data;
 
 			std::map<std::string, uint32_t>::iterator _item = m_cache.find(data);
 
@@ -343,7 +344,7 @@ namespace cxml {
 				return res;
 			}
 
-			m_cache[data] = _offset;
+			m_cache[orig_data] = _offset;
 
 			if(offset != NULL){
 				*offset = _offset;
@@ -359,6 +360,106 @@ namespace cxml {
 		}
 
 		std::map<std::string, uint32_t> m_cache;
+	};
+
+	class intarray_stack : public stack {
+	public:
+		intarray_stack(){
+		}
+
+		~intarray_stack(){
+		}
+
+		int append_intarray(const int *data, uint32_t count, uint32_t *offset){
+
+			int res;
+			uint32_t _offset;
+
+			if(count == 0){
+				return -1;
+			}
+
+			const int *inter_array = (const int *)GetData();
+			uint32_t inter_count = (uint32_t)GetSize() / sizeof(int);
+
+			if(inter_count >= count){
+
+				uint32_t test_count = (inter_count - count) + 1;
+
+				for(uint32_t i=0;i<test_count;i++){
+					if(memcmp(data, &(inter_array[i]), count * sizeof(int)) == 0){
+						if(offset != NULL){
+							*offset = i * sizeof(int);
+						}
+
+						return 0;
+					}
+				}
+			}
+
+			res = append_data_raw(data, count * sizeof(int), &_offset);
+			if(res < 0){
+				return res;
+			}
+
+			if(offset != NULL){
+				*offset = _offset;
+			}
+
+			return 0;
+		}
+
+	private:
+	};
+
+	class floatarray_stack : public stack {
+	public:
+		floatarray_stack(){
+		}
+
+		~floatarray_stack(){
+		}
+
+		int append_floatarray(const float *data, uint32_t count, uint32_t *offset){
+
+			int res;
+			uint32_t _offset;
+
+			if(count == 0){
+				return -1;
+			}
+
+			const float *inter_array = (const float *)GetData();
+			uint32_t inter_count = (uint32_t)GetSize() / sizeof(float);
+
+			if(inter_count >= count){
+
+				uint32_t test_count = (inter_count - count) + 1;
+
+				for(uint32_t i=0;i<test_count;i++){
+					if(memcmp(data, &(inter_array[i]), count * sizeof(float)) == 0){
+						if(offset != NULL){
+							*offset = i * sizeof(float);
+						}
+
+						return 0;
+					}
+				}
+			}
+
+			res = append_data_raw(data, count * sizeof(float), &_offset);
+			if(res < 0){
+				return res;
+			}
+
+			if(offset != NULL){
+				*offset = _offset;
+			}
+
+			return 0;
+		}
+
+	private:
 	};
 
 	class schema {
@@ -618,8 +719,8 @@ namespace cxml {
 		string_stack m_stringtable;
 		wstring_stack m_wstringtable;
 		stack m_hashtable;
-		stack m_intarraytable;
-		stack m_floatarraytable;
+		intarray_stack m_intarraytable;
+		floatarray_stack m_floatarraytable;
 		stack m_filetable;
 		std::list<std::string> m_hash_table_originkey_list;
 		std::map<std::string, File> m_file_map;

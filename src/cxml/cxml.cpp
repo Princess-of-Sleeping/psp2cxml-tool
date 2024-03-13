@@ -410,6 +410,43 @@ int cxml::compiler::xml_tag_alloc_pre_callback(tinyxml2::XMLDocument *doc, tinyx
 
 		pCompiler->m_tree.append_data_raw(attr_temp, sizeof(attr_temp), NULL);
 
+		switch(_attr.GetType()){
+		case attr_type_int:
+		case attr_type_float:
+			break;
+		case attr_type_string:
+			{
+				uint32_t offset;
+
+				int res = pCompiler->m_stringtable.append_string_from_utf8(attr->Value(), &offset);
+				if(res < 0){
+					return res;
+				}
+			}
+			break;
+		case attr_type_wstring:
+			{
+				uint32_t offset;
+
+				int res = pCompiler->m_wstringtable.append_wstring_from_utf8(attr->Value(), &offset);
+				if(res < 0){
+					return res;
+				}
+			}
+			break;
+		case attr_type_hash:
+		case attr_type_intarray:
+		case attr_type_floatarray:
+		case attr_type_filename:
+		case attr_type_id:
+		case attr_type_idref:
+		case attr_type_idhash:
+		case attr_type_idhashref:
+		default:
+			break;
+		}
+
+
 		key.num_attributes++;
 		attr = attr->Next();
 	}
@@ -491,7 +528,7 @@ int cxml::compiler::xml_tag_resolve_attr_callback(tinyxml2::XMLDocument *doc, ti
 				}
 
 				*(int *)((uintptr_t)ptr + 0x8) = offset;
-				*(int *)((uintptr_t)ptr + 0xC) = strlen(attr->Value()) + 1;
+				*(int *)((uintptr_t)ptr + 0xC) = strlen(attr->Value());
 			}
 			break;
 		case attr_type_wstring:
@@ -504,7 +541,7 @@ int cxml::compiler::xml_tag_resolve_attr_callback(tinyxml2::XMLDocument *doc, ti
 				}
 
 				*(int *)((uintptr_t)ptr + 0x8) = offset >> 1;
-				*(int *)((uintptr_t)ptr + 0xC) = strlen(attr->Value()) + 1;
+				*(int *)((uintptr_t)ptr + 0xC) = strlen(attr->Value()) << 1;
 			}
 			break;
 		case attr_type_hash:
@@ -541,7 +578,7 @@ int cxml::compiler::xml_tag_resolve_attr_callback(tinyxml2::XMLDocument *doc, ti
 					return -1;
 				}
 
-				res = pCompiler->m_intarraytable.append_data_raw(intarray.GetData(), intarray.GetSize(), &offset);
+				res = pCompiler->m_intarraytable.append_intarray((const int *)intarray.GetData(), intarray.GetSize() / sizeof(int), &offset);
 				if(res < 0){
 					return -1;
 				}
@@ -575,7 +612,7 @@ int cxml::compiler::xml_tag_resolve_attr_callback(tinyxml2::XMLDocument *doc, ti
 					return -1;
 				}
 
-				res = pCompiler->m_floatarraytable.append_data_raw(floatarray.GetData(), floatarray.GetSize(), &offset);
+				res = pCompiler->m_floatarraytable.append_floatarray((const float *)floatarray.GetData(), floatarray.GetSize() / sizeof(float), &offset);
 				if(res < 0){
 					return -1;
 				}
@@ -717,6 +754,17 @@ int cxml::compiler::CompileXml(const char *xml_path, FileProvider fileProvider){
 			break;
 		}
 
+		// required non aligned size
+		uint32_t tree_size            = m_tree.GetSize();
+		uint32_t idtable_size         = m_idtable.GetSize();
+		uint32_t idhashtable_size     = m_idhashtable.GetSize();
+		uint32_t stringtable_size     = m_stringtable.GetSize();
+		uint32_t wstringtable_size    = m_wstringtable.GetSize();
+		uint32_t hashtable_size       = m_hashtable.GetSize();
+		uint32_t intarraytable_size   = m_intarraytable.GetSize();
+		uint32_t floatarraytable_size = m_floatarraytable.GetSize();
+		uint32_t filetable_size       = m_filetable.GetSize();
+
 		res = m_tree.Align(0x10);
 		if(res < 0){
 			printf("Align tree failed. (%s)\n", xml_path);
@@ -778,23 +826,23 @@ int cxml::compiler::CompileXml(const char *xml_path, FileProvider fileProvider){
 		memcpy(cxml_header.magic, m_magic, 4);
 		cxml_header.version                = m_version;
 		cxml_header.tree_offset            = sizeof(cxml_header);
-		cxml_header.tree_size              = m_tree.GetSize();
-		cxml_header.idtable_offset         = cxml_header.tree_offset + cxml_header.tree_size;
-		cxml_header.idtable_size           = m_idtable.GetSize();
-		cxml_header.idhashtable_offset     = cxml_header.idtable_offset + cxml_header.idtable_size;
-		cxml_header.idhashtable_size       = m_idhashtable.GetSize();
-		cxml_header.stringtable_offset     = cxml_header.idhashtable_offset + cxml_header.idhashtable_size;
-		cxml_header.stringtable_size       = m_stringtable.GetSize();
-		cxml_header.wstringtable_offset    = cxml_header.stringtable_offset + cxml_header.stringtable_size;
-		cxml_header.wstringtable_size      = m_wstringtable.GetSize();
-		cxml_header.hashtable_offset       = cxml_header.wstringtable_offset + cxml_header.wstringtable_size;
-		cxml_header.hashtable_size         = m_hashtable.GetSize();
-		cxml_header.intarraytable_offset   = cxml_header.hashtable_offset + cxml_header.hashtable_size;
-		cxml_header.intarraytable_size     = m_intarraytable.GetSize();
-		cxml_header.floatarraytable_offset = cxml_header.intarraytable_offset + cxml_header.intarraytable_size;
-		cxml_header.floatarraytable_size   = m_floatarraytable.GetSize();
-		cxml_header.filetable_offset       = cxml_header.floatarraytable_offset + cxml_header.floatarraytable_size;
-		cxml_header.filetable_size         = m_filetable.GetSize();
+		cxml_header.tree_size              = tree_size;
+		cxml_header.idtable_offset         = cxml_header.tree_offset + m_tree.GetSize();
+		cxml_header.idtable_size           = idtable_size;
+		cxml_header.idhashtable_offset     = cxml_header.idtable_offset + m_idtable.GetSize();
+		cxml_header.idhashtable_size       = idhashtable_size;
+		cxml_header.stringtable_offset     = cxml_header.idhashtable_offset + m_idhashtable.GetSize();
+		cxml_header.stringtable_size       = stringtable_size;
+		cxml_header.wstringtable_offset    = cxml_header.stringtable_offset + m_stringtable.GetSize();
+		cxml_header.wstringtable_size      = wstringtable_size;
+		cxml_header.hashtable_offset       = cxml_header.wstringtable_offset + m_wstringtable.GetSize();
+		cxml_header.hashtable_size         = hashtable_size;
+		cxml_header.intarraytable_offset   = cxml_header.hashtable_offset + m_hashtable.GetSize();
+		cxml_header.intarraytable_size     = intarraytable_size;
+		cxml_header.floatarraytable_offset = cxml_header.intarraytable_offset + m_intarraytable.GetSize();
+		cxml_header.floatarraytable_size   = floatarraytable_size;
+		cxml_header.filetable_offset       = cxml_header.floatarraytable_offset + m_floatarraytable.GetSize();
+		cxml_header.filetable_size         = filetable_size;
 
 		m_cxml_size = cxml_header.filetable_offset + cxml_header.filetable_size;
 		m_cxml_data = malloc(m_cxml_size);
