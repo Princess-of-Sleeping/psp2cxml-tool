@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.0)
 project(psp2cxml-tool C)
 include(ExternalProject)
 
+set(CMAKE_CXX_STANDARD 11)
+
 set(COMMON_COMPILE_OPTION "-Wl,-q -Wall -O2 -fno-inline -fno-builtin -fshort-wchar -Wunused-result")
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${COMMON_COMPILE_OPTION}")
@@ -60,6 +62,8 @@ add_executable(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
 )
 
-set_target_properties(${PROJECT_NAME}
-  PROPERTIES LINK_FLAGS "-static -lgcc -lstdc++ -lwinpthread"
-)
+if(DEFINED WIN_BUILD)
+  set_target_properties(${PROJECT_NAME}
+    PROPERTIES LINK_FLAGS "-static -lgcc -lstdc++ -lwinpthread"
+  )
+endif()
