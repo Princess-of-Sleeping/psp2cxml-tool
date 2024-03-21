@@ -81,6 +81,7 @@ void SHA1Input(SHA1Context *context, const void *planedata, size_t length){
 void SHA1Result(SHA1Context *context, void *hash){
 
 	int index = context->index;
+	uint64_t length = context->length;
 
 	if(index < 0x38){
 		context->data[index] = 0x80;
@@ -102,7 +103,7 @@ void SHA1Result(SHA1Context *context, void *hash){
 		}
 	}
 
-	uint64_t length = context->length + (context->index * 8);
+	length += (index * 8);
 
 	context->data[0x38] = length >> 56;
 	context->data[0x39] = length >> 48;
