@@ -1519,7 +1519,14 @@ rco::compiler::compiler(){
 		"webview",
 		{"plane"},
 		{
-			{"id", cxml::attr_type_hash}
+			{"url_field",   cxml::attr_type_hash},
+			{"title_field", cxml::attr_type_hash},
+			{"forward_btn", cxml::attr_type_hash},
+			{"progressbar", cxml::attr_type_hash},
+			{"reload_btn",  cxml::attr_type_hash},
+			{"home_url",    cxml::attr_type_string},
+			{"back_btn",    cxml::attr_type_hash},
+			{"id",          cxml::attr_type_hash}
 		}
 	});
 	append_schema({
