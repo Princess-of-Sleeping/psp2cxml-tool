@@ -59,11 +59,28 @@ add_executable(${PROJECT_NAME}
   ${libz_src}
 )
 
-target_link_libraries(${PROJECT_NAME}
+add_executable(${PROJECT_NAME}-invalid_parent_warn
+  src/main.cpp
+  src/cxml/tinyxml2.cpp
+  src/cxml/xml.cpp
+  src/cxml/sha1.c
+  src/cxml/cxml.cpp
+  src/rcs.cpp
+  src/rco.cpp
+  ${libz_src}
+)
+
+set_target_properties(${PROJECT_NAME}-invalid_parent_warn
+  PROPERTIES LINK_FLAGS ""
+  COMPILE_FLAGS "-DPSP2CXML_INVALID_PARENT_WARN"
 )
 
 if(DEFINED WIN_BUILD)
   set_target_properties(${PROJECT_NAME}
+    PROPERTIES LINK_FLAGS "-static -lgcc -lstdc++ -lwinpthread"
+  )
+
+  set_target_properties(${PROJECT_NAME}-invalid_parent_warn
     PROPERTIES LINK_FLAGS "-static -lgcc -lstdc++ -lwinpthread"
   )
 endif()

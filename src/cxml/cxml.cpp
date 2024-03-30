@@ -292,8 +292,54 @@ int cxml::compiler::xml_tag_check_callback(tinyxml2::XMLDocument *doc, tinyxml2:
 	cxml::schema::item& _item = pCompiler->m_schema.FindItem(tag->Value());
 
 	if((uintptr_t)tag->Parent() != (uintptr_t)doc && _item.HasParent(tag->Parent()->Value()) == false){
-		printf("HasParent : %d (%s -> %s)\n", _item.HasParent(tag->Parent()->Value()), tag->Parent()->Value(), tag->Value());
+		printf(
+			"[%s] Invalid Parent : ",
+#ifndef PSP2CXML_INVALID_PARENT_WARN
+			"E"
+#else
+			"W"
+#endif
+		);
+
+		size_t tree_deep = 0;
+		tinyxml2::XMLElement *tag_curr = tag;
+
+		while(tag_curr != NULL && doc != tag_curr->ToDocument()){
+			tree_deep++;
+			tag_curr = tag_curr->Parent()->ToElement();
+		}
+
+		tinyxml2::XMLElement **pList = (tinyxml2::XMLElement **)malloc(sizeof(tinyxml2::XMLElement *) * tree_deep);
+		if(pList != NULL){
+
+			tree_deep = 0;
+			tag_curr = tag;
+
+			while(tag_curr != NULL && doc != tag_curr->ToDocument()){
+				pList[tree_deep++] = tag_curr;
+				tag_curr = tag_curr->Parent()->ToElement();
+			}
+
+			size_t index = 0;
+
+			while(tree_deep != 0){
+				tree_deep--;
+				printf("(%lld):%s", index++, pList[tree_deep]->Value());
+				if(tree_deep != 0){
+					printf(" -> ");
+				}
+			}
+
+			free(pList);
+		}else{
+			printf("memory error");
+		}
+
+		printf("\n");
+
+#ifndef PSP2CXML_INVALID_PARENT_WARN
 		return -1;
+#endif
 	}
 
 	const tinyxml2::XMLAttribute *attr = tag->FirstAttribute();
