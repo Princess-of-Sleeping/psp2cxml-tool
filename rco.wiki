@@ -1360,6 +1360,9 @@ Allowed Attr
 |-
 | id
 | hash
+|-
+| style
+| idhashref
 |}
 
 Allowed Parent
@@ -3883,6 +3886,27 @@ Allowed Attr
 ! Name !! Type
 |-
 | id
+| hash
+|-
+| url_field
+| hash
+|-
+| title_field
+| hash
+|-
+| forward_btn
+| hash
+|-
+| progressbar
+| hash
+|-
+| reload_btn
+| hash
+|-
+| home_url
+| string
+|-
+| back_btn
 | hash
 |}
 
