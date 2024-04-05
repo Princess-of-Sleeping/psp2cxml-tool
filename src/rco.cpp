@@ -519,7 +519,8 @@ rco::compiler::compiler(){
 		"radio_box",
 		{"plane", "text", "box", "page", "template"},
 		{
-			{"id", cxml::attr_type_hash}
+			{"id",    cxml::attr_type_hash},
+			{"style", cxml::attr_type_idhashref}
 		}
 	});
 	append_schema({
